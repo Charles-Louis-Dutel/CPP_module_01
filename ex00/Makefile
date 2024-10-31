@@ -1,6 +1,6 @@
 NAME = zombie
 C = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
+CFLAGS = -Wall -Wextra -Werror -g -std=c++98 -MMD
 
 ############################Sources########################
 SRCS_DIR = srcs/
