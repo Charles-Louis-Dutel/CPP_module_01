@@ -1,10 +1,10 @@
-NAME = brain
+NAME = weapon
 C = c++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98 -MMD
 
 ############################Sources########################
 SRCS_DIR = srcs/
-FILES = main
+FILES = main Weapon HumanA HumanB
 
 
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(FILES)))
