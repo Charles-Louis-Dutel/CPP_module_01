@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:56:30 by cdutel            #+#    #+#             */
-/*   Updated: 2024/10/31 17:49:22 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/11/01 17:16:51 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,55 @@
 
 int	main(int argc, char **argv)
 {
-	if (argc == 4)
+	if (argc != 4)
 	{
-		std::ifstream	infile(argv[1]);
-		std::string		s1 = argv[2];
-		std::string		s2 = argv[3];
+		std::cerr << "Wrong input, try with : ./replace \"valid_filename\" \"string to search\" \"substitute string\"";
+		return (1);
+	}
 
-		char line[256];
-		std::string	test;
-		if (infile.is_open())
+	std::ifstream	infile;
+	std::ofstream	outfile;
+	std::string		file_name = argv[1];
+	std::string		s1 = argv[2];
+	std::string		s2 = argv[3];
+	std::string		line;
+	int			start = 0;
+	int			s1_len = s1.length();
+
+	infile.open(file_name.c_str());
+	if (infile.is_open())
+	{
+		file_name.insert(file_name.length(), ".replace");
+		outfile.open(file_name.c_str());
+		if (outfile.is_open())
 		{
-			while (infile.getline(line, 256))
+			while (std::getline(infile, line))
 			{
-				test = line;
-				std::cout << test.find(s1);
-				std::cout << test;
+				while (true)
+				{
+					start = line.find(s1);
+					if (start == -1 || s1[0] == '\0')
+						break;
+					line.erase(start, s1_len);
+					line.insert(start, s2);
+				}
+				outfile << line << std::endl;
 			}
-			infile.close();
 		}
 		else
-			std::cout << "Error opening file" << std::endl;
-
-		return (0);
+		{
+			std::cerr << "Error opening outfile" << std::endl;
+			infile.close();
+			return (1);
+		}
 	}
+	else
+	{
+		std::cerr << "Error opening infile" << std::endl;
+		return (1);
+	}
+	infile.close();
+	outfile.close();
+	return (0);
 }
+
