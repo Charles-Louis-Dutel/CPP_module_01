@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:16:20 by cdutel            #+#    #+#             */
-/*   Updated: 2024/10/31 15:49:09 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/11/02 17:22:38 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 HumanB::HumanB(std::string name) : _name(name)
 {
-	std::cout << "HumanB constructeur called" << std::endl;
+	//std::cout << "HumanB constructeur called" << std::endl;
 }
 
 HumanB::~HumanB(void)
 {
-	std::cout << "HumanB destructor called" << std::endl;
+	//std::cout << "HumanB destructor called" << std::endl;
 }
 
 void	HumanB::attack(void) const
