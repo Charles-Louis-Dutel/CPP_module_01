@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:33:36 by cdutel            #+#    #+#             */
-/*   Updated: 2024/11/02 17:20:38 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/11/02 17:36:39 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Harl::Harl(void)
 {
-	//std::cout << "Harl constructor called" << std::endl;
+	std::cout << "Harl constructor called" << std::endl;
 }
 
 Harl::~Harl(void)
 {
-	//std::cout << "Harl destructor called" << std::endl;
+	std::cout << "Harl destructor called" << std::endl;
 }
 
 void	Harl::_debug(void)

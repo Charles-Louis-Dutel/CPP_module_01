@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:16:27 by cdutel            #+#    #+#             */
-/*   Updated: 2024/11/02 17:22:39 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/11/02 17:36:14 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Weapon::Weapon(std::string weapon_type) : _type(weapon_type)
 {
-	//std::cout << "Weapon constructor called" << std::endl;
+	std::cout << "Weapon constructor called" << std::endl;
 }
 
 Weapon::~Weapon(void)
 {
-	//std::cout << "Weapon destructor called" << std::endl;
+	std::cout << "Weapon destructor called" << std::endl;
 }
 
 const std::string	&Weapon::getType(void) const
