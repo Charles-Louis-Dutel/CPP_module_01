@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
+/*   By: cdutel <cdutel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:16:23 by cdutel            #+#    #+#             */
-/*   Updated: 2024/10/31 15:47:10 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/11 14:30:36 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Weapon.hpp"
 #include "../includes/HumanA.hpp"
 #include "../includes/HumanB.hpp"
+#include <iostream>
 
 int main()
 {

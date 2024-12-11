@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
+/*   By: cdutel <cdutel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:16:05 by cdutel            #+#    #+#             */
-/*   Updated: 2024/10/31 15:45:55 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/11 15:00:05 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "../includes/Weapon.hpp"
 #include <string>
 #include <iostream>
+#include <new>
 
 class	HumanB
 {
@@ -23,7 +24,7 @@ class	HumanB
 		HumanB(std::string name);
 		~HumanB(void);
 		void	attack(void) const;
-		void	setWeapon(Weapon weapon);
+		void	setWeapon(Weapon &weapon);
 
 	private:
 		std::string	_name;
