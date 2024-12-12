@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:56:30 by cdutel            #+#    #+#             */
-/*   Updated: 2024/12/12 14:29:18 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/12 14:32:00 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ int	main(int argc, char **argv)
 			line.erase(0, start + s1_len);
 			tmp_line += s2;
 		}
-		std::cout << tmp_line << std::endl;
 		outfile << tmp_line << std::endl;
 		tmp_line.clear();
 	}
