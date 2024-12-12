@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:56:30 by cdutel            #+#    #+#             */
-/*   Updated: 2024/12/11 15:18:42 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/12 14:29:18 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,43 +28,43 @@ int	main(int argc, char **argv)
 	std::string		s1 = argv[2];
 	std::string		s2 = argv[3];
 	std::string		line;
-	int			start = 0;
-	int			s1_len = s1.length();
+	std::string		tmp_line;
+	int				start = 0;
+	int				s1_len = s1.length();
 
 	infile.open(file_name.c_str());
-	if (infile.is_open())
-	{
-		file_name.insert(file_name.length(), ".replace");
-		outfile.open(file_name.c_str());
-		if (outfile.is_open())
-		{
-			while (std::getline(infile, line))
-			{
-				while (true)
-				{
-					start = line.find(s1);
-					if (start == -1 || s1[0] == '\0')
-						break;
-					line.erase(start, s1_len);
-					line.insert(start, s2);
-				}
-				outfile << line << std::endl;
-			}
-		}
-		else
-		{
-			std::cerr << "Error opening outfile" << std::endl;
-			infile.close();
-			return (1);
-		}
-	}
-	else
+	if (!infile.is_open())
 	{
 		std::cerr << "Error opening infile" << std::endl;
 		return (1);
+	}
+	file_name += ".replace";
+	outfile.open(file_name.c_str());
+	if (!outfile.is_open())
+	{
+		std::cerr << "Error opening outfile" << std::endl;
+		infile.close();
+		return (1);
+	}
+	while (std::getline(infile, line))
+	{
+		while (true)
+		{
+			start = line.find(s1);
+			if (start == -1 || s1[0] == '\0')
+			{
+				tmp_line.append(line.substr(0));
+				break;
+			}
+			tmp_line.append(line.substr(0, start));
+			line.erase(0, start + s1_len);
+			tmp_line += s2;
+		}
+		std::cout << tmp_line << std::endl;
+		outfile << tmp_line << std::endl;
+		tmp_line.clear();
 	}
 	infile.close();
 	outfile.close();
 	return (0);
 }
-
