@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cdutel <cdutel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:16:05 by cdutel            #+#    #+#             */
-/*   Updated: 2024/12/11 15:00:05 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/18 09:48:22 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class	HumanB
 
 	private:
 		std::string	_name;
-		Weapon		*weapon_type;
+		Weapon		*_weapon_type;
 };
 
 #endif

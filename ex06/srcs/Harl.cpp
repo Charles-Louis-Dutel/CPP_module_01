@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:33:36 by cdutel            #+#    #+#             */
-/*   Updated: 2024/11/02 17:36:39 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/18 10:10:32 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	Harl::complain(std::string level)
 
 	while (i < 4)
 	{
-		if (complain_level[i] == level)
+		if (complain_level[i].compare(level) == 0)
 			break;
 		i++;
 	}

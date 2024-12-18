@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cdutel <cdutel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:16:10 by cdutel            #+#    #+#             */
-/*   Updated: 2024/12/11 14:48:04 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/18 09:45:53 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	Weapon
 		Weapon(std::string weapon_type);
 		~Weapon(void);
 		const std::string	&getType(void) const;
-		void		setType(std::string new_type);
+		void				setType(std::string new_type);
 
 	private:
 		std::string	_type;

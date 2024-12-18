@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:15:59 by cdutel            #+#    #+#             */
-/*   Updated: 2024/10/31 15:31:26 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/18 09:47:12 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	HumanA
 
 	private:
 		std::string		_name;
-		Weapon	&weapon_type;
+		Weapon			&_weapon_type;
 };
 
 #endif
